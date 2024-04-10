@@ -72,9 +72,6 @@ volumes:
 ```shell
 # start 
 docker-compose up 
-
-# remove data 
-docker-compose rm 
 ```
 
 ### APIs
@@ -85,6 +82,6 @@ docker-compose rm
 > please run the docker-compose first 
 
 1. [localhost:5000/docs](localhost:5000/docs)
-fastapi提供一個可互動的swagger api document (可以用這個測試)
+fastapi提供一個可互動的**swagger api document** (可以用這個測試)
 
 1. [api_document.pdf](./api_document.pdf)

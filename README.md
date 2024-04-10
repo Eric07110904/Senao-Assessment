@@ -19,7 +19,7 @@ networks:
 
 services:
   fastapi: 
-    image: azsx26735546/senao-backend
+    image: azsx26735546/senao-backend:latest
     ports:
       - "5000:5000"
     networks:
@@ -42,7 +42,7 @@ services:
       - POSTGRES_DB=${POSTGRES_DB}
   
   flyway:
-    build: ./flyway-migration 
+    image: azsx26735546/senao-assessment_flyway:latest
     depends_on:
       - postgres
     networks:

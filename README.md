@@ -3,9 +3,14 @@
 Design and implement two RESTful HTTP APIs for creating and verifying an account
 and password.
 
-> Notes: 為了方便demo，.env file直接push上github 
+> Notes: 為了方便demo，.env file直接push上github, Laptop: Macbook M1  
 
 ### docker-compose.yml
+* **postgres:** database 
+* **flyway:** database migration tool
+* **fastapi:** our restful api 
+* **redis:** memory db, it's used prevent too many failure of call /verify API.
+
 ```yml
 version: '3.3'
 
@@ -14,7 +19,7 @@ networks:
 
 services:
   fastapi: 
-    image: senao-backend 
+    image: azsx26735546/senao-backend
     ports:
       - "5000:5000"
     networks:
@@ -70,4 +75,7 @@ docker-compose rm
 ```
 
 ### API document 
-[localhost:5000/docs](localhost:5000/docs) or [api_document.pdf](./api_document.pdf)
+> please run the docker-compose first 
+
+1. [localhost:5000/docs](localhost:5000/docs)
+2. [api_document.pdf](./api_document.pdf)

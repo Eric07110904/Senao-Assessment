@@ -76,14 +76,16 @@ docker-compose up
 # swagger API document: localhost:5000/docs
 ```
 
-### APIs
-1. POST /user: for creating account
-2. POST /verify: for verifing account and password
+### APIs (題目要求的兩個api)
+1. [POST] http://localhost:5000/users
+   For creating account.
+2. [POST] http://localhost:5000/verify
+   For verifing account and password
 
 ### API document 
 > please run the docker-compose first 
 
 1. [localhost:5000/docs](localhost:5000/docs)
-fastapi提供一個可互動的**swagger api document** (可以用這個測試)
+fastapi提供一個可互動的**swagger api document** (推薦使用fastapi內建的swagger API document來測試)
 
 1. [api_document.pdf](./api_document.pdf)

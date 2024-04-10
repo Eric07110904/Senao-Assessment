@@ -40,6 +40,8 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - POSTGRES_DB=${POSTGRES_DB}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data 
   
   flyway:
     image: azsx26735546/senao-assessment_flyway:latest
@@ -58,7 +60,8 @@ services:
       - "6379:6379"
     networks:
       - backend
-      
+volumes:
+  postgres-data:
 ```
 
 ### Requirements 
@@ -74,8 +77,14 @@ docker-compose up
 docker-compose rm 
 ```
 
+### APIs
+1. POST /user: for creating account
+2. POST /verify: for verifing account and password
+
 ### API document 
 > please run the docker-compose first 
 
 1. [localhost:5000/docs](localhost:5000/docs)
-2. [api_document.pdf](./api_document.pdf)
+fastapi提供一個可互動的swagger api document (可以用這個測試)
+
+1. [api_document.pdf](./api_document.pdf)

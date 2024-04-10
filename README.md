@@ -8,7 +8,7 @@ and password.
 ### docker-compose.yml
 * **postgres:** database 
 * **flyway:** database migration tool
-* **fastapi:** our restful api 
+* **fastapi:** our restful api expose on port 5000.
 * **redis:** memory db, it's used prevent too many failure of call /verify API.
 
 ```yml
@@ -68,10 +68,12 @@ volumes:
 * Docker
 * Docker Compose 
 
-### How to run this project
+### How to run this container
 ```shell
 # start 
 docker-compose up 
+# api server: localhost:5000
+# swagger API document: localhost:5000/docs
 ```
 
 ### APIs
